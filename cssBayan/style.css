@@ -15,6 +15,8 @@ table, caption, tbody, tfoot, thead, tr, th, td {
   font-weight: normal;
   vertical-align: baseline;
   font-family:sans-serif;
+  transition: 0.5s ease-in-out;
+  color: #2D2112;
 }
 
 /* Исправление стандартных стилей браузера */
@@ -39,21 +41,18 @@ table {
 }
 
 
+
 /* Стили для bayan */
 .bayan {
     max-width: 768px;
     margin: 32px auto;
 }
-.bayan:hover .bayan-icon {
-    display: block;
-}
+
 
 
 .bayan-item {
-    border: #AFA394 solid;
-    border-radius: 8px;
-    margin: 0 16px 8px 16px;
-    background-color: #fff;
+    border-top: #AFA394 solid;
+    margin: 0 16px;
     
 }
 
@@ -74,10 +73,10 @@ table {
     width: 100%;
     display: flex;
     justify-content:space-between;
+    margin-top: 16px;
 }
 
 .bayan-title {
-    /* height: 32px; */
     font-size: 24px;
     margin: 4px 0;
     font-weight:bold;
@@ -89,28 +88,32 @@ table {
 .bayan-icon {
     width: 32px;
     height: 32px;
-    display: none;
+    opacity: 0;
+}
+.bayan:hover .bayan-icon {
+    opacity: 1;
 }
 
+
 .bayan-img {
-    display: none;
-    max-width: 400px;
-    margin: 8px auto;
+    width: 0px;
+    margin: 0 auto;
+
+}
+.bayan-input:checked ~ .bayan-label > .bayan-img {
+    width: 50%;
+    margin-top: 8px;
+}
+.bayan-label:hover > .bayan-img {
+    width: 50%;
+    margin-top: 8px;
 }
 
 .bayan-img > img{
     width: 100%;
 }
 
-
-
-.bayan-input:checked ~ .bayan-label > .bayan-img {
-    display: block;
-    
-}
-
 .bayan-input:checked ~ .bayan-label > .bayan-header > .bayan-icon {
     transform: rotate(45deg);
-    transition: 300ms;
 }
 
