@@ -14,6 +14,7 @@ table, caption, tbody, tfoot, thead, tr, th, td {
   font-size: 100%;
   font-weight: normal;
   vertical-align: baseline;
+  font-family:sans-serif;
 }
 
 /* Исправление стандартных стилей браузера */
@@ -43,11 +44,16 @@ table {
     max-width: 768px;
     margin: 32px auto;
 }
+.bayan:hover .bayan-icon {
+    display: block;
+}
+
 
 .bayan-item {
     border: #AFA394 solid;
     border-radius: 8px;
     margin: 0 16px 8px 16px;
+    background-color: #fff;
     
 }
 
@@ -71,92 +77,40 @@ table {
 }
 
 .bayan-title {
+    /* height: 32px; */
+    font-size: 24px;
+    margin: 4px 0;
+    font-weight:bold;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 .bayan-icon {
     width: 32px;
+    height: 32px;
     display: none;
 }
 
 .bayan-img {
     display: none;
+    max-width: 400px;
+    margin: 8px auto;
 }
 
+.bayan-img > img{
+    width: 100%;
+}
 
 
 
 .bayan-input:checked ~ .bayan-label > .bayan-img {
     display: block;
+    
 }
 
 .bayan-input:checked ~ .bayan-label > .bayan-header > .bayan-icon {
-    display: block;
+    transform: rotate(45deg);
+    transition: 300ms;
 }
 
-
-
-/* 
-Обнуление стандартных стилей браузера
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td {
-  margin: 0;
-  padding: 0;
-  border: 0;
-  font-size: 100%;
-  font-weight: normal;
-  vertical-align: baseline;
-}
-
-Исправление стандартных стилей браузера
-body {
-  line-height: 1;
-  background-color: #FFF3E4;
-}
-ol, ul {
-  list-style: none;
-}
-blockquote, q {
-  quotes: none;
-}
-blockquote:before, blockquote:after,
-q:before, q:after {
-  content: '';
-  content: none;
-}
-table {
-  border-collapse: collapse;
-  border-spacing: 0;
-}
-
-Стили для bayan
-.bayan {
-    max-width: 768px;
-    margin: 32px auto;
-}
-
-.bayan-item {
-    padding: 16px;
-    cursor: pointer;
-}
-
-.bayan-title {
-    display: inline-block;
-    width: calc(100% - 32px);
-}
-
-.bayan-icon {
-    display: inline-block;
-    width: 32px;
-}
-
-.bayan-img {
-    display: none;
-}
- */
