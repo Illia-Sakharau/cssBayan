@@ -58,6 +58,9 @@ table {
         width: 70%;
         margin-top: 0.5rem;
     }
+    .bayan-icon {
+        opacity: 0;
+    }
 }
 
 
@@ -120,7 +123,6 @@ table {
 .bayan-icon {
     width: 2rem;
     height: 2rem;
-    opacity: 0;
 }
 
 .bayan-input:checked ~ .bayan-label > .bayan-header > .bayan-icon {
